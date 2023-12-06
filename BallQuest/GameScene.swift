@@ -22,7 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     let ball = SKShapeNode(circleOfRadius: 20)
     ball.physicsBody = SKPhysicsBody(circleOfRadius: 20)
-    ball.physicsBody?.mass = 0.000000000001
+    ball.physicsBody?.mass = 1
 
     // Put it in the center of the screen and make it white
     ball.position = CGPoint(x: view.frame.midX, y: view.frame.midY)
@@ -42,7 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     // The ground is not affected by gravity and doesn't move
     slider.physicsBody?.isDynamic = false
-    slider.physicsBody?.restitution = 1
+      slider.physicsBody?.restitution = 1.2
     slider.physicsBody?.friction = 0
     slider.physicsBody?.affectedByGravity = false
     slider.physicsBody?.applyImpulse(CGVector(dx: 20, dy: 15))
