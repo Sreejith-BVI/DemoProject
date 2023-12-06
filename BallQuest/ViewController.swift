@@ -10,7 +10,7 @@ import SpriteKit
 
 class ViewController: UIViewController {
 
-  var scene: GameScene?
+  var gameScene: GameScene?
 
       override func loadView() {
           super.loadView()
@@ -24,10 +24,10 @@ class ViewController: UIViewController {
       }
 
       func setupScene() {
-          if let view = self.view as? SKView, scene == nil {
+          if let view = self.view as? SKView, gameScene == nil {
               let scene = GameScene(size: view.bounds.size)
               view.presentScene(scene)
-              self.scene = scene
+              self.gameScene = scene
           }
       }
 
